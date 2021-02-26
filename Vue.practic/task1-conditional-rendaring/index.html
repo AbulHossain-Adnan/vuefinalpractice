@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="vue.app.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- conditional rendaring creative practice -->
+    <div id="app">
+
+        <img v-if="seen" src="img/adnan.jpg" width="100" height="150" alt="">
+        <p>
+            <button class="btn btn-success" @click="show">show image</button>
+            <button class="btn btn-danger" v-if="seen" @click="hide">Hide</button>
+        </p>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    seen: false
+                }
+            },
+            methods: {
+                show() {
+                    this.seen = true;
+
+                },
+                hide() {
+                    this.seen = false
+                }
+
+            }
+
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>

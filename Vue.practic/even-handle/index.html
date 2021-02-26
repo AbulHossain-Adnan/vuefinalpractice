@@ -14,7 +14,10 @@
     <div id="app">
         <p>Counter:{{counter}}</p>
         <button @click="increment">increment</button>
-        <button @click="decrement">decrement</button>
+        <button @click="decrement">decrement</button><br><br>
+        <button @click="increment5">decrement(5)</button>
+        <button @click="decrement5">decrement(5)</button><br>
+
 
     </div>
     <script>
@@ -30,6 +33,9 @@
                 },
                 decrement() {
                     this.counter--
+                },
+                increment5() {
+                    this.counter = this.counter + 5
                 }
 
             }
