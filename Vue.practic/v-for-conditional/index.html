@@ -11,19 +11,30 @@
 </head>
 
 <body>
-    <!-- conditional rendaring creative practice -->
-    <div id="app">
-
+    <!-- conditional rendaring v-for creative practice -->
+    <div id="list-rendering">
+        <ul>
+            <li v-for="(todo, index) in todos">
+                {{index}}-{{ todo.text }}
+            </li>
+        </ul>
     </div>
     <script>
-        const App = {
+        const ListRendering = {
             data() {
                 return {
-
+                    todos: [{
+                        text: 'my name is rawnak'
+                    }, {
+                        text: 'my name is adnan hossain'
+                    }, {
+                        text: 'my father name is '
+                    }]
                 }
             }
         }
-        Vue.createApp(App).mount('#app')
+
+        Vue.createApp(ListRendering).mount('#list-rendering')
     </script>
 </body>
 
