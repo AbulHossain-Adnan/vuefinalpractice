@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="vue.app.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- v-bind for attribut binding (title-attribut)-->
+    <div id="app">
+        <span v-bind:title="message">
+            apni kemon asen.ami valo asi
+        </span>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: 'you lodded this padge' + new Date()
+                }
+
+            }
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>
